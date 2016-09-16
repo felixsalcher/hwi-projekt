@@ -1,0 +1,35 @@
+{
+  "name": "hwi-projekt",
+  "version": "1.0.0",
+  "description": "hwi school project",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felixsalcher/hwi-projekt.git"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "browsersync"
+  ],
+  "author": "Felix Salcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felixsalcher/hwi-projekt/issues"
+  },
+  "homepage": "https://github.com/felixsalcher/hwi-projekt#readme",
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}
