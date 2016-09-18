@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
-var clean = require('gulp-clean');
+var del = require('del');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var minify = require('gulp-clean-css');
@@ -24,8 +24,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('clean', function() {
-    return gulp.src('dist/**/*')
-        .pipe(clean());
+    return del(['dist']);
 });
 
 gulp.task('html', function() {
@@ -37,17 +36,17 @@ gulp.task('html', function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src([
-        'bower_components/normalize-css/normalize.css',
-        src.scss])
+    return gulp.src(src.scss)
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('styles.scss'))
-        .pipe(sass())
+        .pipe(sass({
+            outputStyle: 'compressed',
+            includePaths: require('node-normalize-scss').includePaths
+        }))
         .pipe(autoprefixer({
             browsers: ['> 1%']
         }))
-        .pipe(minify())
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('../map'))
         .pipe(gulp.dest('dist/css'))
