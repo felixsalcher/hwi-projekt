@@ -2,8 +2,8 @@ var gulp = require('gulp');
 var plumber = require('gulp-plumber');
 var del = require('del');
 var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var minify = require('gulp-clean-css');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -39,14 +39,11 @@ gulp.task('styles', function() {
     return gulp.src(src.scss)
         .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(concat('styles.scss'))
         .pipe(sass({
             outputStyle: 'compressed',
             includePaths: require('node-normalize-scss').includePaths
         }))
-        .pipe(autoprefixer({
-            browsers: ['> 1%']
-        }))
+        .pipe(postcss([autoprefixer({browsers: ['> 1%']})]))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('../map'))
         .pipe(gulp.dest('dist/css'))
