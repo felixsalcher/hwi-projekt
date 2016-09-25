@@ -16,7 +16,8 @@ var reload = browserSync.reload;
 var src = {
     html: 'app/*.html',
     scss: 'app/scss/styles.scss',
-    js: 'app/js/*.js'
+    js: 'app/js/*.js',
+    img: 'app/img/*'
 };
 
 gulp.task('default', function() {
@@ -40,8 +41,7 @@ gulp.task('styles', function() {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
-            outputStyle: 'compressed',
-            includePaths: require('node-normalize-scss').includePaths
+            outputStyle: 'compressed'
         }))
         .pipe(postcss([autoprefixer({browsers: ['> 1%']})]))
         .pipe(rename({suffix: '.min'}))
@@ -65,6 +65,12 @@ gulp.task('scripts', function() {
        .pipe(reload({stream: true}));
 });
 
+gulp.task('img', function() {
+    return gulp.src(src.img)
+        .pipe(plumber())
+        .pipe(gulp.dest('dist/img'));
+});
+
 gulp.task('browser-sync', function() {
    return browserSync.init({
        server: {
@@ -80,9 +86,9 @@ gulp.task('watch', function() {
 });
 
 gulp.task('build', ['clean'], function(){
-   return runSequence('styles', 'scripts', 'html');
+   return runSequence('img', 'styles', 'scripts', 'html');
 });
 
 gulp.task('default', ['clean'], function() {
-    return runSequence('styles', 'scripts', 'html', 'browser-sync', 'watch');
+    return runSequence('img', 'styles', 'scripts', 'html', 'browser-sync', 'watch');
 });

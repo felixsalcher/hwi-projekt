@@ -1,0 +1,24 @@
+.flex {
+  display: flex;
+  padding: 0 15px;
+  flex-direction: column;
+}
+
+.flex-headline {
+  width: 100%;
+  text-align: center;
+
+  h2 {
+    display: inline-block;
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0;
+    margin-top: 50px;
+  }
+}
+
+.flex-content {
+  display: flex;
+  flex-wrap: wrap;
+}

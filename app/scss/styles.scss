@@ -1,9 +1,11 @@
 //Normalize
-@import "normalize";
+@import "../../bower_components/normalize-scss/sass/normalize/_import-now.scss";
 
 //Modules
 @import "modules/variables";
 
 //Partials
 @import "partials/base";
+@import "partials/cover";
+@import "partials/flex";
 @import "partials/typography";
