@@ -46,6 +46,7 @@ gulp.task('styles', function() {
         .pipe(postcss([autoprefixer({browsers: ['> 1%']})]))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('../map'))
+        .pipe(gulp.dest('app/css'))
         .pipe(gulp.dest('dist/css'))
         .pipe(reload({stream: true}));
 });
