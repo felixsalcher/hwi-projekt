@@ -10,43 +10,85 @@
     <main>
         <section class="cover">
             <img src="img/cover.jpg">
-            <h1>Überschrift</h1>
-        </section>
-        <section class="about-me flex">
-            <div class="flex-headline">
-                <h2>About me</h2>
-            </div>
-            <div class="flex-content">
-                <div class="photo">
-                    <img src="img/about-me.jpg">
-                </div>
-                <p class="information">Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.</p>
+            <div class="cover-text">
+                <h1 class="bold">Wonderful digital things</h1>
+                <h1 >with passion and creativity</h1>
             </div>
         </section>
-        <section class="my-projects flex">
-            <div class="flex-headline">
-                <h2>Recent Projects</h2>
+
+        <article id="projects" class="article--white">
+            <div class="container">
+                <header>
+                    <h2>Latest Projects</h2>
+                    <p>Passing for creating state-of-the-art digital projects and guiding engaging user experiences is the fuel behind what we do for forward thinking brands and clients.</p>
+                </header>
+                <div class="grid">
+                    <div class="grid-cell project">
+                        <img class="img-fill" src="img/01.jpg">
+                        <div class="project-info">
+                            <h3>Corona</h3>
+                            <h4>Digital Brand Building</h4>
+                        </div>
+                        <div class="project-link">
+                            <a href="#0">More Info</a>
+                        </div>
+                    </div>
+                    <div class="grid-cell project">
+                        <img class="img-fill" src="img/02.jpg">
+                        <div class="project-info">
+                            <h3>HAK Bregenz</h3>
+                            <h4>Website Relaunch</h4>
+                        </div>
+                        <div class="project-link">
+                            <a href="#0">More Info</a>
+                        </div>
+                    </div>
+                    <div class="grid-cell project">
+                        <img class="img-fill" src="img/03.jpg">
+                        <div class="project-info">
+                            <h3>Tischlein  <br /> Deck Dich</h3>
+                            <h4>Corporate Branding</h4>
+                        </div>
+                        <div class="project-link">
+                            <a href="#0">More Info</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="flex-content">
-                <div class="project">
-                    <img src="img/project-01.jpg">
-                </div>
-                <div class="project">
-                    <img src="img/project-02.jpg">
-                </div>
-                <div class="project">
-                    <img src="img/project-03.jpg">
+        </article>
+
+        <article id="more" class="article--grey">
+            <div class="container">
+                <header>
+                    <h2>There's more to explore</h2>
+                    <p>We would love to hear about your project ideas or talk about how we can work together to set your business
+                apart from the rest. And if you feel that we would make a winning team, well give us a shot!</p>
+                </header>
+                <div class="grid more-about-us">
+                    <div class="grid-cell more-cell">
+                        <img src="img/04.jpg" alt="About Us" class="img-responsive">
+                        <h3>About Us</h3>
+                        <p>A peek into our philosophy and our talented team. We will also tell you a few good reasons
+                            why you would love working with us and why you will never want to go back.</p>
+                        <a href="#0" class="btn btn--dark">Find out more</a>
+                    </div>
+                    <div class="grid-cell more-cell">
+                        <img src="img/05.jpg" alt="Our Services" class="img-responsive">
+                        <h3>Our Services</h3>
+                        <p>Learn more about our work ethic and the services we offer to help you achieve great things.
+                        Passion, motivation and enthusiams is always included!</p>
+                        <a href="#0" class="btn btn--dark">Find out more</a>
+                    </div>
+                    <div class="grid-cell more-cell">
+                        <img src="img/06.jpg" alt="Jobs and Careers" class="img-responsive">
+                        <h3>Jobs and Careers</h3>
+                        <p>We are always on the lookout for creative and motivated web enthusiasts that want to be part
+                        of our team and help our clients achieve great things.</p>
+                        <a href="#0" class="btn btn--dark">Find out more</a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <section class="contact-me">
-            <form>
-                <input type="text" placeholder="Firstname" />
-                <input type="text" placeholder="Lastname" />
-                <input type="email" placeholder="email" />
-                <textarea placeholder="Your Message"></textarea>
-            </form>
-        </section>
+        </article>
     </main>
     <script src="js/bundle.min.js"></script>
 </body>

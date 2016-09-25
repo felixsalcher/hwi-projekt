@@ -1,0 +1,77 @@
+.project {
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    .project-info, .project-link {
+      transform: translateY(-100%);
+    }
+  }
+
+  .project-info, .project-link {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    transition: all .3s ease-in-out;
+  }
+
+  .project-info {
+    flex-direction: column;
+    top: 0;
+    height: 100%;
+
+    h3 {
+      font-size: 1.8em;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding-bottom: 5px;
+    }
+    h4 {
+      font-size: 1.2em;
+      color: #999;
+    }
+  }
+  .project-link {
+    height: 80px;
+    top: 100%;
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+  }
+}
+
+.project + .project {
+  @media(min-width: 769px) {
+    margin-left: .5%;
+  }
+}
+
+.more-cell {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 20px 0 10px;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .btn {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+  @media(min-width: 769px) {
+    & + .more-cell {
+      margin-left: 3%;
+    }
+  }
+}

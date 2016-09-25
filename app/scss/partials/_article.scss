@@ -1,0 +1,11 @@
+article {
+  position: relative;
+  padding: 50px 20px;
+
+  &.article--white {
+    background: #fff;
+  }
+  &.article--grey {
+    background: #efefef;
+  }
+}

@@ -1,3 +1,17 @@
-h1, p {
+h1, h2, h3 , h4, p, span, a {
   font-family: $font-stack;
+}
+
+h2 {
+  font-size: 3em;
+  line-height: 115%;
+  text-transform: uppercase;
+  padding-bottom: 25px;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 135%;
+  padding-bottom: 30px;
 }

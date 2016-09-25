@@ -1,0 +1,25 @@
+.grid {
+  display: flex;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+
+    .grid-cell + .grid-cell {
+      margin-top: 5%;
+    }
+  }
+}
+
+.grid-cell {
+  flex: 1;
+  @for $i from 2 through 12 {
+    &.grid-cell--#{$i} {
+      flex: 0 0 (100 / $i)*1%;
+
+      @media(max-width: 768px) {
+        flex: 1;
+
+      }
+    }
+  }
+}

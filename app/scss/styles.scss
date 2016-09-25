@@ -1,11 +1,14 @@
-//Normalize
-@import "../../bower_components/normalize-scss/sass/normalize/_import-now.scss";
+//Reset
+@import "reset";
 
 //Modules
 @import "modules/variables";
 
 //Partials
 @import "partials/base";
+@import "partials/button";
+@import "partials/article";
 @import "partials/cover";
-@import "partials/flex";
+@import "partials/grid";
 @import "partials/typography";
+@import "partials/project";
