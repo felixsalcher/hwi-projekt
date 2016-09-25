@@ -6,9 +6,15 @@
   font-weight: 400;
   padding: .7em 1.2em;
   border-radius: 5px;
+  cursor: pointer;
+  border: 0;
 
   &.btn--dark {
     color: #fff;
     background: #000;
+  }
+
+  &.btn--margin-top {
+    margin-top: 2em;
   }
 }

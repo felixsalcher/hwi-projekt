@@ -46,12 +46,6 @@
   }
 }
 
-.project + .project {
-  @media(min-width: 769px) {
-    margin-left: .5%;
-  }
-}
-
 .more-cell {
   display: flex;
   flex-direction: column;
@@ -68,10 +62,5 @@
   .btn {
     margin-top: auto;
     align-self: flex-start;
-  }
-  @media(min-width: 769px) {
-    & + .more-cell {
-      margin-left: 3%;
-    }
   }
 }
