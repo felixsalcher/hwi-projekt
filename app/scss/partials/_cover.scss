@@ -21,6 +21,10 @@
     text-transform: uppercase;
     line-height: 120%;
 
+    @media(max-width: $screen-xs-max) {
+      font-size: 3em;
+    }
+
     &.bold {
       font-weight: 700;
     }
